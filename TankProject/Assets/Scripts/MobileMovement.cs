@@ -9,22 +9,38 @@ public class MobileMovement : MonoBehaviour {
     private bool grounded = false;
     // treat as horizontal (moveDir)
     private float moveDir = 0;
-       
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private float moveVert = 0;
+
+    // Use this for initialization
+    void Start() {
+
+    }
 
     // Update is called once per frame
     void Update()
     {
         Move();
     }
-     void Move()
+    void Move()
     {
         Vector3 velocity = GetComponent<Rigidbody2D>().velocity;
         velocity.x = moveSpeed * moveDir;
         GetComponent<Rigidbody2D>().velocity = velocity;
+        Vector3 velocity2 = GetComponent<Rigidbody2D>().velocity;
+        velocity2.y = moveSpeed * moveVert;
+        GetComponent<Rigidbody2D>().velocity = velocity2;
+    }
+    public void MoveUp()
+    {
+        moveVert = 1;
+    }
+    public void MoveDown()
+    {
+        moveVert = -1;
+    }
+    public void Stop2()
+    {
+        moveVert = 0;
     }
     public void MoveRight()
     {
