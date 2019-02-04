@@ -9,8 +9,8 @@ public class MobileMovement : MonoBehaviour {
     private bool grounded = false;
     public float spinSpeed = 1;
     // treat as horizontal (moveDir)
-    private float moveDir = 0;
-    private float moveVert = 0;
+    public float moveDir = 0;
+    public float moveVert = 0;
     public GameObject Player;
 
     // Use this for initialization
@@ -47,7 +47,7 @@ public class MobileMovement : MonoBehaviour {
     public void MoveRight()
     {
         moveDir = 1;
-        transform.Rotate(0,0,-spinSpeed, Space.World);
+       // transform.Rotate(0,0,-spinSpeed, Space.World);
     }
     public void MoveLeft()
     {

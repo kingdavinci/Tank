@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class PlayerShoot : MonoBehaviour {
-    public Slider WaitTimeShoot;
+ 
     public GameObject prefab;
     public float shootSpeed = 0;
     float timer = 0;
@@ -15,7 +15,7 @@ public class PlayerShoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
-        WaitTimeShoot.GetComponent<Slider>().value = timer;
+       
 		if(Input.GetButton("Fire1") && timer > 0.2f)
         {
             timer = 0;
