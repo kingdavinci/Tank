@@ -12,10 +12,15 @@ public class MobileMovement : MonoBehaviour {
     public float moveDir = 0;
     public float moveVert = 0;
     public GameObject Player;
+    public Vector3 PlayerPosition;
+    public int Direction = 1;
+    Vector3 shootDir;
+    public float shootSpeed = 0;
+    public GameObject BulletPrefab;
 
     // Use this for initialization
     void Start() {
-
+        shootDir = new Vector3(0, 1, 0);
     }
 
     // Update is called once per frame
@@ -35,10 +40,12 @@ public class MobileMovement : MonoBehaviour {
     public void MoveUp()
     {
         moveVert = 1;
+        Direction = 1;
     }
     public void MoveDown()
     {
         moveVert = -1;
+        Direction = 2;
     }
     public void Stop2()
     {
@@ -47,11 +54,13 @@ public class MobileMovement : MonoBehaviour {
     public void MoveRight()
     {
         moveDir = 1;
-       // transform.Rotate(0,0,-spinSpeed, Space.World);
+        Direction = 3;
+        // transform.Rotate(0,0,-spinSpeed, Space.World);
     }
     public void MoveLeft()
     {
         moveDir = -1;
+        Direction = 4;
     }
     public void Stop()
     {
@@ -59,11 +68,56 @@ public class MobileMovement : MonoBehaviour {
     }
     public void Jump()
     {
-        if(grounded)
+        if (grounded)
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 100 * jumpSpeed));
         }
     }
+    public void Shoot()
+    {
+        if (Direction == 1)
+        {
+            shootDir = new Vector3(0, 1, 0);//transform.position;
+            shootDir.Normalize();
+            Vector3 offset = shootDir;
+            shootDir = shootDir * shootSpeed;
+            GameObject bullet = (GameObject)Instantiate(BulletPrefab,
+                transform.position + offset, Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
+            Destroy(bullet, 2.0f);
+        } else if (Direction == 2)
+        {
+            shootDir = new Vector3(0, -1, 0);
+            shootDir.Normalize();
+            Vector3 offset = shootDir;
+            shootDir = shootDir * shootSpeed;
+            GameObject bullet = (GameObject)Instantiate(BulletPrefab,
+                transform.position + offset, Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
+            Destroy(bullet, 2.0f);
+        } else if (Direction == 3)
+        {
+            shootDir = new Vector3(1, 0, 0);
+            shootDir.Normalize();
+            Vector3 offset = shootDir;
+            shootDir = shootDir * shootSpeed;
+            GameObject bullet = (GameObject)Instantiate(BulletPrefab,
+                transform.position + offset, Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
+            Destroy(bullet, 2.0f);
+        } else if (Direction == 4)
+        {
+            shootDir = new Vector3(-1, 0, 0);
+            shootDir.Normalize();
+            Vector3 offset = shootDir;
+            shootDir = shootDir * shootSpeed;
+            GameObject bullet = (GameObject)Instantiate(BulletPrefab,
+                transform.position + offset, Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
+            Destroy(bullet, 2.0f);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == 8)
