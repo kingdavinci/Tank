@@ -2463,6 +2463,7 @@ GameObject:
   - component: {fileID: 1620672009}
   - component: {fileID: 1620672007}
   - component: {fileID: 1620672006}
+  - component: {fileID: 1620672008}
   m_Layer: 0
   m_Name: New Piskel (52)
   m_TagString: Untagged
@@ -2517,6 +2518,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6615286, y: 0.8134067}
   m_EdgeRadius: 0
+--- !u!114 &1620672008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620672005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213616ea77b0f634ca5339c5534e95aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2044397655}
+  chaseSpeed: 1
+  chaseTriggerDistance: 10
+  paceDirection: {x: 0, y: 0, z: 0}
+  paceDistance: 3
+  paceSpeed: 2
 --- !u!212 &1620672009
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2573,8 +2592,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620672005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -2.74, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.7, y: -2.4, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -2746,7 +2765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044397655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.14, y: 0.54, z: -0.020507812}
+  m_LocalPosition: {x: 5.41, y: -1.92, z: -0.020507812}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
