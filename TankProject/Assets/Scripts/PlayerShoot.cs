@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class PlayerShoot : MonoBehaviour {
- 
+public class PlayerShoot : MonoBehaviour
+{
+
     public GameObject prefab;
     public float shootSpeed = 0;
     float timer = 0;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         timer += Time.deltaTime;
-       
-		if(Input.GetButton("Fire1") && timer > 0.2f)
+
+        if (Input.GetButton("Fire1") && timer > 1.3f)
         {
             timer = 0;
             var mousePosition = Input.mousePosition;
@@ -30,7 +33,9 @@ public class PlayerShoot : MonoBehaviour {
             GameObject bullet = (GameObject)Instantiate(prefab,
                 transform.position + offset, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
-            Destroy(bullet, 0.5f);
+            Destroy(bullet, 2.0f);
         }
-	}
-}
+    }
+    
+    }
+
