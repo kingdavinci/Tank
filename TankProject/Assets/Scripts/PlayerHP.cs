@@ -11,8 +11,6 @@ public class PlayerHP : MonoBehaviour {
     public int lives = 3;
     public Text healthText;
     public Slider healthBar;
-    public float timer = 300;
-    public Text timerText;
     public GameObject prefab;
     public float shootSpeed = 10;
     public GameObject DeathScreen;
@@ -21,33 +19,27 @@ public class PlayerHP : MonoBehaviour {
     
     // Use this for initialization
     void Start () {
-        PlayerPrefs.SetInt("Lives", lives);
-        lives = PlayerPrefs.GetInt("Lives");
+        //PlayerPrefs.SetInt("Lives", lives);
+        //lives = PlayerPrefs.GetInt("Lives");
         healthText.GetComponent<Text>().text = "Health: " + hp;
         healthBar.GetComponent<Slider>().value = hp;
-        timerText.GetComponent<Text>().text = "time:" + Mathf.RoundToInt(timer);
+        //timerText.GetComponent<Text>().text = "time:" + Mathf.RoundToInt(timer);
         hp = 10;
-        livesText.GetComponent<Text>().text = "Lives: " + lives;
+        //livesText.GetComponent<Text>().text = "Lives: " + lives;
         
     }
     void Update() {
-        timer -= Time.deltaTime;
-        if (timer <= 0.0f)
+        //timer -= Time.deltaTime;
+        //if (hp <= 0)
+        //{
+            //PlayerPrefs.SetInt("Lives", lives - 1);
+            //Time.timeScale = 0;
+            //DeathScreen.GetComponent<Canvas>().enabled = true;
+        //}
+        if ( hp <= 0 )
         {
-            PlayerPrefs.SetInt("Lives", lives - 1);
-            Time.timeScale = 0;
-            DeathScreen.GetComponent<Canvas>().enabled = true;
-        }
-        if (hp <= 0)
-        {
-            PlayerPrefs.SetInt("Lives", lives - 1);
-            Time.timeScale = 0;
-            DeathScreen.GetComponent<Canvas>().enabled = true;
-        }
-        if ( lives <= 0 )
-        {
-            PlayerPrefs.SetInt("Lives", lives = 3);
-            Time.timeScale = 1;
+            //PlayerPrefs.SetInt("Lives", lives = 3);
+            //Time.timeScale = 1;
             SceneManager.LoadScene("Lose");
         }
     }
@@ -56,12 +48,9 @@ public class PlayerHP : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            if (collision.gameObject.tag == "Enemy")
-            {
-                hp -= 1;
-                healthText.GetComponent<Text>().text = "Health: " + hp;
-                healthBar.GetComponent<Slider>().value = hp;
-            }
+            hp -= 1;
+            healthText.GetComponent<Text>().text = "Health: " + hp;
+            healthBar.GetComponent<Slider>().value = hp;
         }
         if (collision.gameObject.tag == "Fire")
         {
