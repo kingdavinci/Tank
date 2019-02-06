@@ -4603,7 +4603,7 @@ PrefabInstance:
     - target: {fileID: 1811660209960763871, guid: c3b3d3ac100231e4c9ca389329a64d1a,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 1811660209960763857, guid: c3b3d3ac100231e4c9ca389329a64d1a,
         type: 3}
@@ -6335,7 +6335,7 @@ GameObject:
   - component: {fileID: 1678585995}
   - component: {fileID: 1678585994}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6414,6 +6414,10 @@ MonoBehaviour:
   moveDir: 0
   moveVert: 0
   Player: {fileID: 1678585993}
+  PlayerPosition: {x: 0, y: 0, z: 0}
+  Direction: 1
+  shootSpeed: 0
+  BulletPrefab: {fileID: 0}
 --- !u!212 &1678585998
 SpriteRenderer:
   m_ObjectHideFlags: 0
