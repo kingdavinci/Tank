@@ -7,6 +7,7 @@ public class MenuButtons : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject DiffMenu;
+    public GameObject Cam;
     void Update()
     {
         // check to see if p key is pressed
@@ -61,11 +62,15 @@ public class MenuButtons : MonoBehaviour
     }*/
     public void Easy()
     {
+        Cam.GetComponent<Difficulty>().diff = 1;
+        Debug.Log(Cam.GetComponent<Difficulty>().diff);
         DiffMenu.SetActive(false);
         MainMenu.SetActive(true);
     }
     public void Hard()
     {
+        Cam.GetComponent<Difficulty>().diff = 2;
+        Debug.Log(Cam.GetComponent<Difficulty>().diff);
         DiffMenu.SetActive(false);
         MainMenu.SetActive(true);
     }
