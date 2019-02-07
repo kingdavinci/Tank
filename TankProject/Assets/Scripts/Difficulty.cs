@@ -14,7 +14,8 @@ public class Difficulty : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        diff = PlayerPrefs.GetInt("Difficulty");
+        PlayerPrefs.SetInt("Difficulty", diff);
+       // diff = PlayerPrefs.GetInt("Difficulty");
     }
     void ModifyDifficulty(int mod)
     {

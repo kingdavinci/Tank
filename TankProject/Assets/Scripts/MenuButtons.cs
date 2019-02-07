@@ -8,10 +8,12 @@ public class MenuButtons : MonoBehaviour
     public GameObject MainMenu;
     public GameObject DiffMenu;
     public GameObject Cam;
+    public GameObject UI;
+    public string Map;
     void Update()
     {
         // check to see if p key is pressed
-        if (Input.GetKeyDown(KeyCode.P))
+       /* if (Input.GetKeyDown(KeyCode.P))
         {
 
             //if is pressed stop stuff from moving
@@ -19,14 +21,16 @@ public class MenuButtons : MonoBehaviour
             {
                 Time.timeScale = 0;
                 //make pause menu visible
+                UI.GetComponent<Canvas>().enabled = false;
                 GetComponent<Canvas>().enabled = true;
             }
             else if (Time.timeScale == 0)
             {
+                UI.GetComponent<Canvas>().enabled = true;
                 //unpause
                 Resume();
             }
-        }
+        }*/
     }
 
     public void NewGame()
@@ -34,17 +38,19 @@ public class MenuButtons : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
-    public void QuitGame()
+   /* public void QuitGame()
     {
+        UI.GetComponent<Canvas>().enabled = true;
         Application.Quit();
     }
 
     public void Resume()
     {
+        UI.GetComponent<Canvas>().enabled = true;
         GetComponent<Canvas>().enabled = false;
         Time.timeScale = 1;
     }
-
+    */
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -73,6 +79,10 @@ public class MenuButtons : MonoBehaviour
         Debug.Log(Cam.GetComponent<Difficulty>().diff);
         DiffMenu.SetActive(false);
         MainMenu.SetActive(true);
+    }
+    public void ToDiffScene()
+    {
+        SceneManager.LoadScene(Map);
     }
 
 }
