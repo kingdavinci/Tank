@@ -27,6 +27,31 @@ public class MobileMovement : MonoBehaviour {
     void Update()
     {
         Move();
+        if(Input.GetKeyDown("A"))
+        {
+            moveDir = -1;
+            Direction = 4;
+            Debug.Log("Left");
+        }
+        if (Input.GetKeyDown("D"))
+        {
+            moveDir = 1;
+            Direction = 3;
+            Debug.Log("Right");
+        }
+        if (Input.GetKeyDown("W"))
+        {
+            moveVert = 1;
+            Direction = 1;
+            Debug.Log("Up");
+        }
+        if (Input.GetKeyDown("S"))
+        {
+            moveVert = -1;
+            Direction = 2;
+            Debug.Log("Down");
+        }
+
     }
     void Move()
     {
@@ -78,7 +103,7 @@ public class MobileMovement : MonoBehaviour {
         }
     }
     public void Shoot()
-    {
+    { //Up
         if (Direction == 1)
         {
             shootDir = new Vector3(0, .5f, 0);//transform.position;
@@ -89,6 +114,7 @@ public class MobileMovement : MonoBehaviour {
                 transform.position + offset, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
             Destroy(bullet, 2.0f);
+            //Down
         } else if (Direction == 2)
         {
             shootDir = new Vector3(0, -.5f, 0);
@@ -99,6 +125,7 @@ public class MobileMovement : MonoBehaviour {
                 transform.position + offset, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
             Destroy(bullet, 2.0f);
+            //Right
         } else if (Direction == 3)
         {
             shootDir = new Vector3(.5f, 0, 0);
@@ -109,6 +136,7 @@ public class MobileMovement : MonoBehaviour {
                 transform.position + offset, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
             Destroy(bullet, 2.0f);
+            //Left
         } else if (Direction == 4)
         {
             shootDir = new Vector3(-.5f, 0, 0);
