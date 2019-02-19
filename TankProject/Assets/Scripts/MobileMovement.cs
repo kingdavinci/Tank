@@ -27,29 +27,51 @@ public class MobileMovement : MonoBehaviour {
     void Update()
     {
         Move();
-        if(Input.GetKeyDown("A"))
+        if(Input.GetKeyDown(KeyCode.A))
         {
             moveDir = -1;
             Direction = 4;
             Debug.Log("Left");
+          
         }
-        if (Input.GetKeyDown("D"))
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            moveDir = 0;
+           
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
         {
             moveDir = 1;
             Direction = 3;
             Debug.Log("Right");
+        
         }
-        if (Input.GetKeyDown("W"))
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            moveDir = 0;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.W))
         {
             moveVert = 1;
             Direction = 1;
             Debug.Log("Up");
+          
         }
-        if (Input.GetKeyDown("S"))
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            moveVert = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
         {
             moveVert = -1;
             Direction = 2;
             Debug.Log("Down");
+          
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            moveVert = 0;
         }
 
     }
