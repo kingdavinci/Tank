@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour {
 
-    public float hp = 10;
+    public float hp = 40;
     public int lives = 3;
     public Text healthText;
     public Slider healthBar;
@@ -24,7 +24,7 @@ public class PlayerHP : MonoBehaviour {
         healthText.GetComponent<Text>().text = "Health: " + hp;
         healthBar.GetComponent<Slider>().value = hp;
         //timerText.GetComponent<Text>().text = "time:" + Mathf.RoundToInt(timer);
-        hp = 10;
+        hp = 40;
         //livesText.GetComponent<Text>().text = "Lives: " + lives;
         
     }
