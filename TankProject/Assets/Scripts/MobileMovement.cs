@@ -41,11 +41,13 @@ public class MobileMovement : MonoBehaviour {
     {
         moveVert = 1;
         Direction = 1;
+        Debug.Log("Up");
     }
     public void MoveDown()
     {
         moveVert = -1;
         Direction = 2;
+        Debug.Log("Down");
     }
     public void Stop2()
     {
@@ -55,12 +57,14 @@ public class MobileMovement : MonoBehaviour {
     {
         moveDir = 1;
         Direction = 3;
+        Debug.Log("Right");
         // transform.Rotate(0,0,-spinSpeed, Space.World);
     }
     public void MoveLeft()
     {
         moveDir = -1;
         Direction = 4;
+        Debug.Log("Left");
     }
     public void Stop()
     {
@@ -77,7 +81,7 @@ public class MobileMovement : MonoBehaviour {
     {
         if (Direction == 1)
         {
-            shootDir = new Vector3(0, 1, 0);//transform.position;
+            shootDir = new Vector3(0, .5f, 0);//transform.position;
             shootDir.Normalize();
             Vector3 offset = shootDir;
             shootDir = shootDir * shootSpeed;
@@ -87,7 +91,7 @@ public class MobileMovement : MonoBehaviour {
             Destroy(bullet, 2.0f);
         } else if (Direction == 2)
         {
-            shootDir = new Vector3(0, -1, 0);
+            shootDir = new Vector3(0, -.5f, 0);
             shootDir.Normalize();
             Vector3 offset = shootDir;
             shootDir = shootDir * shootSpeed;
@@ -97,7 +101,7 @@ public class MobileMovement : MonoBehaviour {
             Destroy(bullet, 2.0f);
         } else if (Direction == 3)
         {
-            shootDir = new Vector3(1, 0, 0);
+            shootDir = new Vector3(.5f, 0, 0);
             shootDir.Normalize();
             Vector3 offset = shootDir;
             shootDir = shootDir * shootSpeed;
@@ -107,7 +111,7 @@ public class MobileMovement : MonoBehaviour {
             Destroy(bullet, 2.0f);
         } else if (Direction == 4)
         {
-            shootDir = new Vector3(-1, 0, 0);
+            shootDir = new Vector3(-.5f, 0, 0);
             shootDir.Normalize();
             Vector3 offset = shootDir;
             shootDir = shootDir * shootSpeed;
