@@ -13,7 +13,8 @@ public class MedKit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        paceDirection.Normalize();
+        startPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -24,7 +25,8 @@ public class MedKit : MonoBehaviour
         if (distanceFromStart >= paceDistance)
         {
             // flip directions
-            paceDirection = -paceDirection;
+            displacement.Normalize();
+            paceDirection = -displacement;
         }
         paceDirection.Normalize();
         GetComponent<Rigidbody2D>().velocity = paceDirection * paceSpeed;

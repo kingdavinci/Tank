@@ -15,7 +15,8 @@ public class EnemyChase : MonoBehaviour {
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
         startPosition = transform.position;
-	}
+        paceDirection.Normalize();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -50,13 +51,13 @@ public class EnemyChase : MonoBehaviour {
         }
         else
         {
-            //pace back and forth, because we're home and the player isn't close
             Vector3 displacement = transform.position - startPosition;
             float distanceFromStart = displacement.magnitude;
-            if(distanceFromStart >= paceDistance)
+            if (distanceFromStart >= paceDistance)
             {
                 // flip directions
-                paceDirection = -paceDirection;
+                displacement.Normalize();
+                paceDirection = -displacement;
             }
             paceDirection.Normalize();
             GetComponent<Rigidbody2D>().velocity = paceDirection * paceSpeed;
