@@ -161,7 +161,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4289588967248844652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +177,6 @@ MonoBehaviour:
   player: {fileID: 0}
   chaseSpeed: 1
   chaseTriggerDistance: 10
-  paceDirection: {x: 0, y: 0, z: 0}
+  paceDirection: {x: 0, y: 2, z: 0}
   paceDistance: 3
   paceSpeed: 2
