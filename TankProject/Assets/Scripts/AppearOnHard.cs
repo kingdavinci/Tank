@@ -19,6 +19,7 @@ public class AppearOnHard : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().enabled = true;
             GetComponent<BoxCollider2D>().enabled = true;
+            GetComponent<EnemyShoot>().enabled = true;
         }
     }
 }
