@@ -29,12 +29,13 @@ public class PlayerHP : MonoBehaviour {
         
     }
     void Update() {
+        //healthBar.GetComponent<Slider>().value = hp;
         //timer -= Time.deltaTime;
         //if (hp <= 0)
         //{
-            //PlayerPrefs.SetInt("Lives", lives - 1);
-            //Time.timeScale = 0;
-            //DeathScreen.GetComponent<Canvas>().enabled = true;
+        //PlayerPrefs.SetInt("Lives", lives - 1);
+        //Time.timeScale = 0;
+        //DeathScreen.GetComponent<Canvas>().enabled = true;
         //}
         if ( hp <= 0 )
         {
