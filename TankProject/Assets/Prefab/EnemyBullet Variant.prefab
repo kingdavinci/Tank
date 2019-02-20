@@ -15,17 +15,12 @@ PrefabInstance:
     - target: {fileID: 2180475989365003379, guid: 1549f69d9af9e404c9dd05906557b7b1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2180475989365003379, guid: 1549f69d9af9e404c9dd05906557b7b1,
         type: 3}
       propertyPath: m_TagString
       value: EnemyBullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576548353798995445, guid: 1549f69d9af9e404c9dd05906557b7b1,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7372499548940697327, guid: 1549f69d9af9e404c9dd05906557b7b1,
         type: 3}
@@ -91,6 +86,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576548353798995445, guid: 1549f69d9af9e404c9dd05906557b7b1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1549f69d9af9e404c9dd05906557b7b1, type: 3}

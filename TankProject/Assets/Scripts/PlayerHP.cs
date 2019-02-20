@@ -30,6 +30,7 @@ public class PlayerHP : MonoBehaviour {
     }
     void Update() {
         healthBar.GetComponent<Slider>().value = hp;
+        healthText.GetComponent<Text>().text = "Health: " + hp;
         //timer -= Time.deltaTime;
         //if (hp <= 0)
         //{

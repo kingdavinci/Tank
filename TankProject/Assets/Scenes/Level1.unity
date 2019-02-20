@@ -546,6 +546,7 @@ GameObject:
   - component: {fileID: 706360229}
   - component: {fileID: 706360228}
   - component: {fileID: 706360231}
+  - component: {fileID: 706360232}
   m_Layer: 0
   m_Name: MedKit
   m_TagString: MedKit
@@ -643,11 +644,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73ffb14f2dec994580fe96dfcecc002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paceDirection: {x: 0, y: 0, z: 0}
-  paceDistance: 3
-  paceSpeed: 2
+  paceDirection: {x: 0, y: 7, z: 0}
+  paceDistance: 7
+  paceSpeed: 8
   health: 10
   Player: {fileID: 1027269247}
+--- !u!50 &706360232
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706360227}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1001 &1010279681
 PrefabInstance:
   m_ObjectHideFlags: 0
