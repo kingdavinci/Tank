@@ -1014,6 +1014,7 @@ MonoBehaviour:
   MainMenu: {fileID: 2120394928}
   DiffMenu: {fileID: 1506469663}
   Cam: {fileID: 802620023}
+  UI: {fileID: 0}
   Map: 
 --- !u!1 &1801052985
 GameObject:
@@ -1311,7 +1312,8 @@ MonoBehaviour:
   MainMenu: {fileID: 2120394928}
   DiffMenu: {fileID: 1506469663}
   Cam: {fileID: 802620023}
-  Map: Level3
+  UI: {fileID: 0}
+  Map: Level1
 --- !u!114 &2120394931
 MonoBehaviour:
   m_ObjectHideFlags: 0
