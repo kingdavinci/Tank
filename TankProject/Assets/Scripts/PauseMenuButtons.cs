@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 public class PauseMenuButtons : MonoBehaviour
 {
     public GameObject UI;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -34,7 +34,22 @@ public class PauseMenuButtons : MonoBehaviour
             }
         }
     }
-
+    public void PauseButton()
+    {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            //make pause menu visible
+            UI.GetComponent<Canvas>().enabled = false;
+            GetComponent<Canvas>().enabled = true;
+        }
+        else if (Time.timeScale == 0)
+        {
+            UI.GetComponent<Canvas>().enabled = true;
+            //unpause
+            Resume();
+        }
+    }
     public void QuitGame()
     {
         UI.GetComponent<Canvas>().enabled = true;
