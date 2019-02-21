@@ -31,7 +31,7 @@ public class MobileMovement : MonoBehaviour {
         {
             moveDir = -1;
             Direction = 4;
-            Debug.Log("Left");
+          //  Debug.Log("Left");
           
         }
         if (Input.GetKeyUp(KeyCode.A))
@@ -43,7 +43,7 @@ public class MobileMovement : MonoBehaviour {
         {
             moveDir = 1;
             Direction = 3;
-            Debug.Log("Right");
+           // Debug.Log("Right");
         
         }
         if (Input.GetKeyUp(KeyCode.D))
@@ -55,7 +55,7 @@ public class MobileMovement : MonoBehaviour {
         {
             moveVert = 1;
             Direction = 1;
-            Debug.Log("Up");
+          //  Debug.Log("Up");
           
         }
         if (Input.GetKeyUp(KeyCode.W))
@@ -66,7 +66,7 @@ public class MobileMovement : MonoBehaviour {
         {
             moveVert = -1;
             Direction = 2;
-            Debug.Log("Down");
+         //   Debug.Log("Down");
           
         }
         if (Input.GetKeyUp(KeyCode.S))
@@ -126,49 +126,59 @@ public class MobileMovement : MonoBehaviour {
     }
     public void Shoot()
     { //Up
-        if (Direction == 1)
+        if (Player.GetComponent<Ammo>().Missles >= 1)
         {
-            shootDir = new Vector3(0, .5f, 0);//transform.position;
-            shootDir.Normalize();
-            Vector3 offset = shootDir;
-            shootDir = shootDir * shootSpeed;
-            GameObject bullet = (GameObject)Instantiate(BulletPrefab,
-                transform.position + offset, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
-            Destroy(bullet, 2.0f);
-            //Down
-        } else if (Direction == 2)
-        {
-            shootDir = new Vector3(0, -.5f, 0);
-            shootDir.Normalize();
-            Vector3 offset = shootDir;
-            shootDir = shootDir * shootSpeed;
-            GameObject bullet = (GameObject)Instantiate(BulletPrefab,
-                transform.position + offset, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
-            Destroy(bullet, 2.0f);
-            //Right
-        } else if (Direction == 3)
-        {
-            shootDir = new Vector3(.5f, 0, 0);
-            shootDir.Normalize();
-            Vector3 offset = shootDir;
-            shootDir = shootDir * shootSpeed;
-            GameObject bullet = (GameObject)Instantiate(BulletPrefab,
-                transform.position + offset, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
-            Destroy(bullet, 2.0f);
-            //Left
-        } else if (Direction == 4)
-        {
-            shootDir = new Vector3(-.5f, 0, 0);
-            shootDir.Normalize();
-            Vector3 offset = shootDir;
-            shootDir = shootDir * shootSpeed;
-            GameObject bullet = (GameObject)Instantiate(BulletPrefab,
-                transform.position + offset, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
-            Destroy(bullet, 2.0f);
+            if (Direction == 1)
+            {
+                shootDir = new Vector3(0, .5f, 0);//transform.position;
+                shootDir.Normalize();
+                Vector3 offset = shootDir;
+                shootDir = shootDir * shootSpeed;
+                GameObject bullet = (GameObject)Instantiate(BulletPrefab,
+                    transform.position + offset, Quaternion.identity);
+                bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
+                Player.GetComponent<Ammo>().Missles--;
+                Destroy(bullet, 2.0f);
+                //Down
+            }
+            else if (Direction == 2)
+            {
+                shootDir = new Vector3(0, -.5f, 0);
+                shootDir.Normalize();
+                Vector3 offset = shootDir;
+                shootDir = shootDir * shootSpeed;
+                GameObject bullet = (GameObject)Instantiate(BulletPrefab,
+                    transform.position + offset, Quaternion.identity);
+                bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
+                Player.GetComponent<Ammo>().Missles--;
+                Destroy(bullet, 2.0f);
+                //Right
+            }
+            else if (Direction == 3)
+            {
+                shootDir = new Vector3(.5f, 0, 0);
+                shootDir.Normalize();
+                Vector3 offset = shootDir;
+                shootDir = shootDir * shootSpeed;
+                GameObject bullet = (GameObject)Instantiate(BulletPrefab,
+                    transform.position + offset, Quaternion.identity);
+                bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
+                Player.GetComponent<Ammo>().Missles--;
+                Destroy(bullet, 2.0f);
+                //Left
+            }
+            else if (Direction == 4)
+            {
+                shootDir = new Vector3(-.5f, 0, 0);
+                shootDir.Normalize();
+                Vector3 offset = shootDir;
+                shootDir = shootDir * shootSpeed;
+                GameObject bullet = (GameObject)Instantiate(BulletPrefab,
+                    transform.position + offset, Quaternion.identity);
+                bullet.GetComponent<Rigidbody2D>().velocity = shootDir;
+                Player.GetComponent<Ammo>().Missles--;
+                Destroy(bullet, 2.0f);
+            }
         }
     }
 
