@@ -73,9 +73,16 @@ public class MenuButtons : MonoBehaviour
         DiffMenu.SetActive(false);
         MainMenu.SetActive(true);
     }
-    public void Hard()
+    public void Medium()
     {
         Cam.GetComponent<Difficulty>().diff = 2;
+        Debug.Log(Cam.GetComponent<Difficulty>().diff);
+        DiffMenu.SetActive(false);
+        MainMenu.SetActive(true);
+    }
+    public void Hard()
+    {
+        Cam.GetComponent<Difficulty>().diff = 3;
         Debug.Log(Cam.GetComponent<Difficulty>().diff);
         DiffMenu.SetActive(false);
         MainMenu.SetActive(true);
