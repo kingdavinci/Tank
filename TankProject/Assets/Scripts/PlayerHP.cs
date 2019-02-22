@@ -54,6 +54,12 @@ public class PlayerHP : MonoBehaviour {
             healthText.GetComponent<Text>().text = "Health: " + hp;
             healthBar.GetComponent<Slider>().value = hp;
         }
+        if (collision.gameObject.tag == "Soldier")
+        {
+            healthText.GetComponent<Text>().text = "Health: " + hp;
+            healthBar.GetComponent<Slider>().value = hp;
+            Destroy(collision.gameObject);
+        }
         if (collision.gameObject.tag == "Fire")
         {
             hp -= 1;
