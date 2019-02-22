@@ -37,6 +37,9 @@ public class SoldierChase : MonoBehaviour
             if (chaseTriggerDistance <= 0.5f)
             {
                 home = true;
+                Vector3 homeDirection = startPosition - transform.position;
+                homeDirection.Normalize();
+                GetComponent<Rigidbody2D>().velocity = homeDirection * paceSpeed;
             }
         }
         else if (home == false)
@@ -70,6 +73,20 @@ public class SoldierChase : MonoBehaviour
             }
             paceDirection.Normalize();
             GetComponent<Rigidbody2D>().velocity = paceDirection * paceSpeed;
+        }
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            chaseSpeed = 0.0f;
         }
     }
 }
