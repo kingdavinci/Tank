@@ -20,12 +20,16 @@ public class WallDestroy : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             Destroy(collision.gameObject);
-            Destroy(gameObject);
+       
         }
         if (collision.gameObject.tag == "EnemyBullet")
         {
             Destroy(collision.gameObject);
-            Destroy(gameObject);
+           
+        }
+        if (collision.gameObject.tag == "SoldierBullet")
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
