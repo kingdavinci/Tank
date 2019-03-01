@@ -20,14 +20,14 @@ public class Ammo : MonoBehaviour
     {
       //this  Missles = PlayerPrefs.GetInt("TotalAmmo");
         AmmoText.GetComponent<Text>().text = "Ammo:" + Missles;
-    }
+    } /*
      void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ammo")
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player")
         {
             Missles += 20;
           //this  PlayerPrefs.SetInt("TotalAmmo", Missles + 1);
-            Destroy(collision.gameObject);
-        }
-    }
-}
+            Destroy(gameObject);
+        }*/
+    } 
+
