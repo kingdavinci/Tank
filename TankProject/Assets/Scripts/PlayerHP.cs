@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour {
 
-    public float hp = 40;
+    public float hp = 70;
     public int lives = 3;
     public Text healthText;
     public Slider healthBar;
@@ -24,7 +24,7 @@ public class PlayerHP : MonoBehaviour {
         healthText.GetComponent<Text>().text = "Health: " + hp;
         healthBar.GetComponent<Slider>().value = hp;
         //timerText.GetComponent<Text>().text = "time:" + Mathf.RoundToInt(timer);
-        hp = 40;
+        hp = 70;
         //livesText.GetComponent<Text>().text = "Lives: " + lives;
         
     }
@@ -50,7 +50,7 @@ public class PlayerHP : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            hp -= 1;
+            hp -= 2;
             healthText.GetComponent<Text>().text = "Health: " + hp;
             healthBar.GetComponent<Slider>().value = hp;
         }
@@ -62,20 +62,27 @@ public class PlayerHP : MonoBehaviour {
         }
         if (collision.gameObject.tag == "Fire")
         {
-            hp -= 1;
+            hp -= 2;
             healthText.GetComponent<Text>().text = "Health: " + hp;
             healthBar.GetComponent<Slider>().value = hp;
         }
         if (collision.gameObject.tag == "EnemyBullet")
         {
-            hp -= 1;
+            hp -= 3;
             healthText.GetComponent<Text>().text = "Health: " + hp;
             healthBar.GetComponent<Slider>().value = hp;
         }
+     
     }
         private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Spikes")
+        {
+            hp -= 2;
+            healthText.GetComponent<Text>().text = "Health: " + hp;
+            healthBar.GetComponent<Slider>().value = hp;
+        }
+        if (collision.gameObject.tag == "SoldierBullet")
         {
             hp -= 1;
             healthText.GetComponent<Text>().text = "Health: " + hp;

@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   player: {fileID: 0}
-  bulletSpeed: 8
+  bulletSpeed: 6
   shootDistance: 3
   bulletLifetime: 1.5
   shootDelay: 0.4

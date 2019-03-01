@@ -12,6 +12,7 @@ TagManager:
   - Spikes
   - MedKit
   - Soldier
+  - SoldierBullet
   layers:
   - Default
   - TransparentFX
