@@ -22565,6 +22565,11 @@ PrefabInstance:
       propertyPath: shootDistance
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3798273083043881929, guid: 66414b441fc67dd468047d3b68e048fa,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3204673374000355002, guid: 66414b441fc67dd468047d3b68e048fa,
         type: 3}
       propertyPath: m_IsTrigger
