@@ -24,6 +24,7 @@ public class SoldierHP : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

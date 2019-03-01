@@ -5,7 +5,7 @@ public class EnemyShoot : MonoBehaviour
 {
     public GameObject prefab;
     public GameObject player;
-    public float bulletSpeed = 10f;
+    public float bulletSpeed = 4.0f;
     public float shootDistance = 5;
     public float bulletLifetime = 1.0f;
     public float shootDelay = 1.0f;
@@ -32,8 +32,8 @@ public class EnemyShoot : MonoBehaviour
             shootDirection.Normalize();
 
             Vector3 spawnPosition = transform.position;
-            spawnPosition.x += shootDirection.x * 0.2f;
-            spawnPosition.y += shootDirection.y * 0.2f;
+            spawnPosition.x += shootDirection.x * -0.2f;
+            spawnPosition.y += shootDirection.y * -0.2f;
 
             //create the object in front of the player
             GameObject bullet = (GameObject)Instantiate(prefab, spawnPosition, Quaternion.identity);

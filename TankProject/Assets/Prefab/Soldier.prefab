@@ -142,7 +142,7 @@ MonoBehaviour:
   bulletSpeed: 6
   shootDistance: 3
   bulletLifetime: 1.5
-  shootDelay: 0.4
+  shootDelay: 2
 --- !u!114 &2444474254497802718
 MonoBehaviour:
   m_ObjectHideFlags: 0

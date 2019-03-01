@@ -30,6 +30,7 @@ public class WallDestroy : MonoBehaviour
         if (collision.gameObject.tag == "SoldierBullet")
         {
             Destroy(collision.gameObject);
+            Debug.Log("I'm hitting the wall");
         }
     }
 }

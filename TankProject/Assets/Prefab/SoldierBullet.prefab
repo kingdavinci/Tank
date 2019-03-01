@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8642155848029631346}
   - component: {fileID: 2254114677774059140}
   - component: {fileID: 4899931498176951085}
+  - component: {fileID: 6361639566818078137}
   - component: {fileID: 5389051759039475326}
   m_Layer: 0
   m_Name: SoldierBullet
@@ -91,12 +92,24 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0781517, y: 0.062981606}
   m_Size: {x: 0.030305862, y: 0.06324768}
   m_Direction: 0
+--- !u!114 &6361639566818078137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841193893994565553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de28f5349c489894aa1f7fdfb0e62697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &5389051759039475326
 Rigidbody2D:
   serializedVersion: 4
