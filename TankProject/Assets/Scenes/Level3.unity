@@ -2054,6 +2054,26 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 1815040366387351024}
+    - target: {fileID: 880430406267057574, guid: a1fe38ea411770b45b8897f1d87b9367,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 880430405966702612, guid: a1fe38ea411770b45b8897f1d87b9367,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -238
+      objectReference: {fileID: 0}
+    - target: {fileID: 880430405966702612, guid: a1fe38ea411770b45b8897f1d87b9367,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 880430405966702612, guid: a1fe38ea411770b45b8897f1d87b9367,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fe38ea411770b45b8897f1d87b9367, type: 3}
 --- !u!1 &1034531625
@@ -96996,9 +97016,10 @@ GameObject:
   - component: {fileID: 1997105517}
   - component: {fileID: 1997105516}
   - component: {fileID: 1997105518}
+  - component: {fileID: 1997105519}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103825,6 +103846,18 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!114 &1997105519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997105514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5a744153c3fe14c9fc6730c3ce0b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2046999830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4289588967248844654, guid: 1476f734fb30dc84a990ed069d34cd78,
