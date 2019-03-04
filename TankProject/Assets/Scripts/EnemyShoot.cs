@@ -26,7 +26,7 @@ public class EnemyShoot : MonoBehaviour
         {
             Vector2 shootDirection = shootDir;
             //create the bullet object
-
+            Debug.Log("shoot");
             //reduce the length of the direction to 1, so it is always the same regardless of how far away
             //the mouse is from the player. 
             shootDirection.Normalize();

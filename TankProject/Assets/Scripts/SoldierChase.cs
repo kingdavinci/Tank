@@ -29,18 +29,23 @@ public class SoldierChase : MonoBehaviour
         // if the player is 4 away and the trigger distance is 5 then start chasing
         if (chaseDirection.magnitude < chaseTriggerDistance)
         {
+            
             //Chase because the player is close to the enemy
             home = false;
+            if(chaseDirection.magnitude < 0.5f)
+            {
+                return;
+            }
             chaseDirection.Normalize();
             GetComponent<Rigidbody2D>().velocity = chaseDirection * chaseSpeed;
             // runs if the player is not close enough to the enemy
-            if (chaseTriggerDistance <= 0.5f)
+            /*if (chaseTriggerDistance <= 0.5f)
             {
                 home = true;
                 Vector3 homeDirection = startPosition - transform.position;
                 homeDirection.Normalize();
                 GetComponent<Rigidbody2D>().velocity = homeDirection * paceSpeed;
-            }
+            }*/
         }
         else if (home == false)
         {
