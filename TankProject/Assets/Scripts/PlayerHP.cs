@@ -87,6 +87,7 @@ public class PlayerHP : MonoBehaviour {
             hp -= 1;
             healthText.GetComponent<Text>().text = "Health: " + hp;
             healthBar.GetComponent<Slider>().value = hp;
+            Destroy(collision.gameObject);
         }
     }
 }
