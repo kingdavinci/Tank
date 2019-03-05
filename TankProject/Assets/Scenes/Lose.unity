@@ -74325,7 +74325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9673b7246fa08418ae1d98f78a8695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Missles: 9999999
+  Missles: 2147483647
   AmmoText: {fileID: 1398973042}
 --- !u!50 &6609649865411485491
 Rigidbody2D:
