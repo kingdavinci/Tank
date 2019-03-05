@@ -86,12 +86,14 @@ public class MobileMovement : MonoBehaviour {
     }
     public void MoveUp()
     {
+        moveDir = 0;
         moveVert = 1;
         Direction = 1;
         Debug.Log("Up");
     }
     public void MoveDown()
     {
+        moveDir = 0;
         moveVert = -1;
         Direction = 2;
         Debug.Log("Down");
@@ -102,6 +104,7 @@ public class MobileMovement : MonoBehaviour {
     }
     public void MoveRight()
     {
+        moveVert = 0;
         moveDir = 1;
         Direction = 3;
         Debug.Log("Right");
@@ -109,6 +112,7 @@ public class MobileMovement : MonoBehaviour {
     }
     public void MoveLeft()
     {
+        moveVert = 0;
         moveDir = -1;
         Direction = 4;
         Debug.Log("Left");
