@@ -32,11 +32,13 @@ public class SoldierChase : MonoBehaviour
             
             //Chase because the player is close to the enemy
             home = false;
-            if(chaseDirection.magnitude < 0.5f)
+            if(chaseDirection.magnitude < 2.0f)
             {
                 return;
             }
+            Debug.Log("continue");
             chaseDirection.Normalize();
+            Debug.Log(chaseDirection);
             GetComponent<Rigidbody2D>().velocity = chaseDirection * chaseSpeed;
             // runs if the player is not close enough to the enemy
             /*if (chaseTriggerDistance <= 0.5f)
@@ -91,7 +93,7 @@ public class SoldierChase : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            chaseSpeed = 0.0f;
+            //chaseSpeed = 0.0f;
         }
     }
 }
