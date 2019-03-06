@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenuButtons : MonoBehaviour
 {
     public GameObject UI;
-
+    public GameObject HTPUI;
+    public GameObject PauseUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,5 +68,16 @@ public class PauseMenuButtons : MonoBehaviour
         UI.GetComponent<Canvas>().enabled = true;
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
+    }
+    public void HelpAppear()
+    {
+        HTPUI.GetComponent<Canvas>().enabled = true;
+        PauseUI.GetComponent<Canvas>().enabled = false;
+
+    }
+    public void HelpDisappear()
+    {
+        PauseUI.GetComponent<Canvas>().enabled = true;
+        HTPUI.GetComponent<Canvas>().enabled = false;
     }
 }
