@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 153164827}
   - component: {fileID: 153164830}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: TP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

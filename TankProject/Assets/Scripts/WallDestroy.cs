@@ -30,7 +30,14 @@ public class WallDestroy : MonoBehaviour
         if (collision.gameObject.tag == "SoldierBullet")
         {
             Destroy(collision.gameObject);
-            Debug.Log("I'm hitting the wall");
+         
+        }
+    }
+     void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "SoldierBullet")
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
