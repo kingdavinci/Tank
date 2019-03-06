@@ -35,7 +35,7 @@ public class MedKit : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            Player.GetComponent<PlayerHP>().hp += 5;
+            Player.GetComponent<PlayerHP>().hp += 10;
             Destroy(gameObject);
         }
     }
