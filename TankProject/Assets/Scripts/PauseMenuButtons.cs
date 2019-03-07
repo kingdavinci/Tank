@@ -69,7 +69,7 @@ public class PauseMenuButtons : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
-    public void HelpAppear()
+    /*public void HelpAppear()
     {
         HTPUI.GetComponent<Canvas>().enabled = true;
         PauseUI.GetComponent<Canvas>().enabled = false;
@@ -79,5 +79,5 @@ public class PauseMenuButtons : MonoBehaviour
     {
         PauseUI.GetComponent<Canvas>().enabled = true;
         HTPUI.GetComponent<Canvas>().enabled = false;
-    }
+    }*/
 }

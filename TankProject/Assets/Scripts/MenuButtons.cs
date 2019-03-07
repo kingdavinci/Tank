@@ -9,6 +9,7 @@ public class MenuButtons : MonoBehaviour
     public GameObject DiffMenu;
     public GameObject Cam;
     public GameObject UI;
+    public GameObject HTPUI;
     public string Map;
     void Update()
     {
@@ -90,6 +91,17 @@ public class MenuButtons : MonoBehaviour
     public void ToDiffScene()
     {
         SceneManager.LoadScene(Map);
+    }
+    public void HelpAppear()
+    {
+        HTPUI.GetComponent<Canvas>().enabled = true;
+        UI.GetComponent<Canvas>().enabled = false;
+
+    }
+    public void HelpDisappear()
+    {
+        UI.GetComponent<Canvas>().enabled = true;
+        HTPUI.GetComponent<Canvas>().enabled = false;
     }
 
 }
