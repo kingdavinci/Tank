@@ -76,7 +76,7 @@ public class PlayerHP : MonoBehaviour {
     }
         private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Spikes"  && collision.gameObject.layer == 9)
+        if (collision.gameObject.tag == "Spikes")
         {
             hp -= 2;
             healthText.GetComponent<Text>().text = "Health: " + hp;

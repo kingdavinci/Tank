@@ -49463,7 +49463,7 @@ GameObject:
   - component: {fileID: 704865922}
   - component: {fileID: 704865921}
   - component: {fileID: 704865920}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Spikes
   m_TagString: Spikes
   m_Icon: {fileID: 0}
