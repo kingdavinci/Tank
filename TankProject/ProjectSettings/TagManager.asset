@@ -13,6 +13,7 @@ TagManager:
   - MedKit
   - Soldier
   - SoldierBullet
+  - Boss
   layers:
   - Default
   - TransparentFX
